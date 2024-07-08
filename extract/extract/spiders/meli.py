@@ -4,7 +4,7 @@ import scrapy
 class MeliSpider(scrapy.Spider):
     name = "meli"
     allowed_domains = ["lista.mercadolivre.com.br"]
-    start_urls = ["https://lista.mercadolivre.com.br/acessorios-veiculos/som-automotivo/alto-falantes"]
+    start_urls = ["https://lista.mercadolivre.com.br/capacete-moto#D[A:capacete%20moto]"]
 
     def parse(self, response):
         products = response.css('div.ui-search-result__wrapper')
