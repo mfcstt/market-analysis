@@ -11,7 +11,7 @@ class MeliSpider(scrapy.Spider):
         
         for product in products:
             
-           prices = products.css('span.andes-money-amount__fraction::text').getall()
+           prices = product.css('span.andes-money-amount__fraction::text').getall()
            cents = product.css('span.andes-money-amount__cents::text').getall()
             
            yield {
