@@ -27,7 +27,7 @@ df['new_price'] = df['new_price_reais'] + df['new_price_centavos'] / 100
 df.drop(columns=['old_price_reais', 'old_price_centavos', 'new_price_reais', 'new_price_centavos'], inplace=True)
 
 
-#salvar um arquivo csv do dataframe tratado
-df.to_csv('../data/data_transformed.csv', index=False)
+#salvar um arquivo json do dataframe tratado
+df.to_json('../data/data_transformed.json', lines=True, orient='records')
 
 
